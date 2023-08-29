@@ -63,8 +63,7 @@ Board Table의 content를 @Lob 어노테이션을 통해 longtext 타입으로 �
 그래서 @Lob 대신 @Column(columnDefinition = "LONGTEXT")를 통해 변경해줬다!
 
 ##### 2023/8/19 ✔ <br>
-
-commit이 너무 꼬여버린 것 같아서 초기화를 하려고 했으나, "그냥 다시 시작하자!" 하는 마음에 리포지토리를 새로 생성했다.<br>
+<<JSON 학습>> <br>
 
 ##### 2023/8/22 ✔ <br>
 <<회원가입 Insert Test>> <br>
@@ -75,4 +74,5 @@ commit이 너무 꼬여버린 것 같아서 초기화를 하려고 했으나, "�
 <<Select, Paging, Update, Delete Test>>
 
 ##### 2023/8/29 ✔ <br>
-<<Exception 처리, 화면 구현>>
+<<Exception 처리, 메인 화면>> <br>
+
