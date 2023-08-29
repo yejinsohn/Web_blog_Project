@@ -65,12 +65,12 @@ Board Table의 content를 @Lob 어노테이션을 통해 longtext 타입으로 �
 commit이 너무 꼬여버린 것 같아서 초기화를 하려고 했으나, "그냥 다시 시작하자!" 하는 마음에 리포지토리를 새로 생성했다.<br>
 
 ##### 2023/8/22 ✔ <br>
-<<insert Test>> <br>
+<<Insert Test>> <br>
 
 더미 데이터 insert에서 @DynamicInsert은 insert할 때, null인 필드는 제외해준다.
 
 ##### 2023/8/25 ✔ <br>
-<<select, paging, update, delete Test>>
+<<Select, Paging, Update, Delete Test>>
 
 ##### 2023/8/29 ✔ <br>
 <<Exception 처리, 화면 구현>>
