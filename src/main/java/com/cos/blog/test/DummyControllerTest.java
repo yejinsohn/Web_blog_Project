@@ -40,7 +40,7 @@ public class DummyControllerTest {
 		return "id : " + id + " 삭제 완료!" ;
 	}
 	
-	// update Test
+	// Update Test
 	@Transactional // 선언적 트랜잭션으로 해당 범위 내 메서드가 트랜잭션이 되도록 보장해줌
 	@PutMapping("/dummy/user/{id}")
 	public User updateUser(@PathVariable int id, @RequestBody User requestUser){
@@ -79,7 +79,7 @@ public class DummyControllerTest {
 		User user = userRepository.findById(id).orElseThrow(new Supplier<IllegalArgumentException>(){
 			@Override
 			public IllegalArgumentException get() {
-				return new IllegalArgumentException("해당 유저는 없습니다! id : " + id);
+				return new IllegalArgumentException("id = " + id + " 해당 유저는 없습니다.");
 			}
 		});
 		return user;
