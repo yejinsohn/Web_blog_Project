@@ -9,6 +9,8 @@ Language : Java <br>
 Spring boot / MySQL <br>
 의존성 설정 : Spring Boot DevTools, Lombok, Spring Data JPA, MySQL Driver, Spring Security, Spring Web
 
+목적 : Y2K 유행으로 과거 유행했던 '싸이월드'와 같은 친한 사람들끼리 일상을 공유할 수 있는 블로그를 제작해보면 어떨까? 하는 생각에 제작하게 되었다!
+
 ##### 2023/8/5 ✔ <br>
 <<개발 환경 구축 및 테스트 진행>> <br>
 
