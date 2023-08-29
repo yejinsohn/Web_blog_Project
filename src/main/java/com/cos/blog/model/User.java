@@ -7,6 +7,8 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -35,8 +37,8 @@ public class User {
 	@Column(nullable = false, length = 50)
 	private String email;
 	
-	@ColumnDefault("'user'")
-	private String role; //나중에 Enum으로 교체
+	@Enumerated(EnumType.STRING)
+	private RoleType role; 
 	
 	@CreationTimestamp //시간 자동입력
 	private Timestamp createDate;
