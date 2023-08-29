@@ -76,3 +76,5 @@ Board Table의 content를 @Lob 어노테이션을 통해 longtext 타입으로 �
 ##### 2023/8/29 ✔ <br>
 <<Exception 처리, 메인 화면>> <br>
 
+Bootstrap4를 이용해 UI 구현 <br>
+STS4에서는 JSP Editor를 지원하지 않기 때문에 JSP Editor를 사용하기 위해 Web Developer Tool를 별도로 설치
