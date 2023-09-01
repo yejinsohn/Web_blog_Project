@@ -74,7 +74,12 @@ Board Table의 content를 @Lob 어노테이션을 통해 longtext 타입으로 �
 <<Select, Paging, Update, Delete Test>>
 
 ##### 2023/8/29 ✔ <br>
-<<Exception 처리, 메인 화면>> <br>
+<<Exception 처리, 메인 화면 구현>> <br>
 
 Bootstrap4를 이용해 UI 구현 <br>
-STS4에서는 JSP Editor를 지원하지 않기 때문에 JSP Editor를 사용하기 위해 Web Developer Tool를 별도로 설치
+STS4에서는 JSP Editor를 지원하지 않기 때문에 JSP Editor를 사용하기 위해 Web Developer Tool를 별도로 설치 <br>
+
+Navbar와 Footer의 경우, 모든 페이지에 동일하게 적용될 수 있도록 스크립트는 바디가 끝나는 가장 아래에 배치
+
+##### 2023/9/1 ✔ <br>
+<<메인 화면 수정 및 회원가입 구현>> <br>
