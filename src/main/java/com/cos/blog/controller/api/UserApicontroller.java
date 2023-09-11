@@ -19,7 +19,7 @@ public class UserApicontroller {
 	@Autowired
 	private UserService userservice;
 	
-	@PostMapping("/auth/signProc")
+	@PostMapping("/api/user")
 	public ResponseDto<Integer> save(@RequestBody User user) {
 		System.out.println("save 호출");
 		user.setRole(RoleType.USER);

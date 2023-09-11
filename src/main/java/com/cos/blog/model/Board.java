@@ -33,8 +33,6 @@ public class Board {
 	
 	@Column(columnDefinition = "LONGTEXT")
 	private String content; 
-	
-	@ColumnDefault("0")
 	private int count; //조회수
 	
 	@ManyToOne // Many = Board, One = User

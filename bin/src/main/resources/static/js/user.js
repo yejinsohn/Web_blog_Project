@@ -20,13 +20,13 @@ let index = {
 		$.ajax({
 			// 회원가입 요청
 			type : "POST",
-			url : "/blog/api/user",
+			url : "/auth/signProc",
 			data : JSON.stringify(data), // http body 데이터
 			contentType : "application/json; charset=utf-8", // body 데이터의 Type
 			dataType : "json" // 요청에 대한 응답이 왔을때 json이라면 JS오브젝트로 변경 
 		}).done(function(resp){
 			alert("회원가입 완료!");
-			location.href="/blog";
+			location.href="/";
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		}); 
