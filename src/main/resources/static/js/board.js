@@ -12,14 +12,12 @@ let index = {
 	},
 	
 	save : function(){
-		// alert('user의 save함수 호출'); -> 확인
 		let data = {
 			title : $("#title").val(),
 			content : $("#content").val(),		
 		};
 		
 		$.ajax({
-			// 회원가입 요청
 			type : "POST",
 			url : "/blog/api/board",
 			data : JSON.stringify(data),

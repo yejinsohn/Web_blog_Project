@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.cos.blog.service.BoardService;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class BoardController {
 	
@@ -29,8 +31,9 @@ public class BoardController {
 	}
 	
 	@GetMapping("/board/{id}")
-	public String findById(@PathVariable int id, Model model){
+	public String findById(@PathVariable int id, Model model, HttpSession session){
 		model.addAttribute("board", boardService.detail(id));
+		model.addAttribute("auth", session.getAttribute("auth"));
 		return "board/detail";
 	}
 	

@@ -2,19 +2,29 @@ package com.cos.blog.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class UserController {
 	
-	@GetMapping("/user/signForm")
+	@GetMapping("/auth/signForm")
 	public String signForm() {
 		
 		return "user/signForm";
 	}
 	
-	@GetMapping("/user/loginForm")
+	@GetMapping("/auth/loginForm")
 	public String loginForm() {
 		
 		return "user/loginForm";
 	}
+	
+	@RequestMapping(value="user/logout") 
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/";
+    }
 }

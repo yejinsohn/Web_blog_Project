@@ -3,6 +3,9 @@ let index = {
 		$("#btn-save").on("click", ()=>{ //this를 바인딩하기 위해서 function(){} 대신 사용
 			this.save();
 		});
+		$("#btn-login").on("click", ()=>{ //this를 바인딩하기 위해서 function(){} 대신 사용
+			this.login();
+		});
 	},
 	
 	save : function(){
@@ -20,12 +23,32 @@ let index = {
 		$.ajax({
 			// 회원가입 요청
 			type : "POST",
-			url : "/blog/api/user",
+			url : "/blog/api/user/signup",
 			data : JSON.stringify(data), // http body 데이터
 			contentType : "application/json; charset=utf-8", // body 데이터의 Type
 			dataType : "json" // 요청에 대한 응답이 왔을때 json이라면 JS오브젝트로 변경 
 		}).done(function(resp){
 			alert("회원가입 완료!");
+			location.href="/blog";
+		}).fail(function(error){
+			alert(JSON.stringify(error));
+		}); 
+	},
+	
+	login : function(){
+		let data = {
+			username : $("#username").val(),
+			password : $("#password").val()			
+		};
+		
+		$.ajax({
+			type : "POST",
+			url : "/blog/api/user/login",
+			data : JSON.stringify(data), // http body 데이터
+			contentType : "application/json; charset=utf-8", // body 데이터의 Type
+			dataType : "json" // 요청에 대한 응답이 왔을때 json이라면 JS오브젝트로 변경 
+		}).done(function(resp){
+			alert("로그인 완료!");
 			location.href="/blog";
 		}).fail(function(error){
 			alert(JSON.stringify(error));

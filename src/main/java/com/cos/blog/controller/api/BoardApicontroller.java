@@ -9,10 +9,14 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cos.blog.domain.Auth;
+import com.cos.blog.dto.BoardSaveDto;
 import com.cos.blog.dto.ResponseDto;
 import com.cos.blog.model.Board;
+import com.cos.blog.model.User;
 import com.cos.blog.service.BoardService;
 
+import jakarta.servlet.http.HttpSession;
 
 @RestController
 public class BoardApicontroller {
@@ -21,15 +25,15 @@ public class BoardApicontroller {
 	private BoardService boardService;
 	
 	@PostMapping("/api/board")
-	public ResponseDto<Integer> save(@RequestBody Board board) {
+	public ResponseDto<Integer> save(@RequestBody BoardSaveDto request, Auth auth) {
 		System.out.println("save 호출");
-		boardService.Writeup(board);
+		boardService.Writeup(request, auth);
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
 	}
 	
 	@DeleteMapping("/api/board/{id}")
-	public ResponseDto<Integer> deleteById(@PathVariable int id) {
-		boardService.Delete(id);
+	public ResponseDto<Integer> deleteById(@PathVariable int id, Auth auth) {
+		boardService.Delete(id, auth);
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
 	}
 	
