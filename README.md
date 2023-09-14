@@ -1,10 +1,10 @@
 ## 🖥 blog_Project
 
-#### 8월에는 블로그 제작 프로젝트를 진행해보고자 한다!
+#### 8월부터는 블로그 제작 프로젝트를 진행해보고자 한다!
 
 ##### 💡 정보
 
-Day : 2023/8/5-2023/8/ <br>
+Day : 2023/8/5-2023/ <br>
 Language : Java <br>
 Spring boot / MySQL <br>
 의존성 설정 : Spring Boot DevTools, Lombok, Spring Data JPA, MySQL Driver, Spring Security, Spring Web
@@ -109,3 +109,8 @@ spring security 에러 때문에 정말 죽을 것 같다...
 <<게시판 기능 구현>>
 
 글쓰기, 수정, 삭제
+
+##### 2023/9/14✔ <br>
+<<로그인 기능 수정>>
+
+인터셉터로 
